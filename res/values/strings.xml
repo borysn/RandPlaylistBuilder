@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RandPlaylistBuilder</string>
+    <string name="action_settings">Settings</string>
+    <string name="playlist_chooser_prompt_text">( Choose A Playlist Here &#8230; )</string>
+    <string name="play_button_text">Play</string>
+    <string name="stop_button_text">Stop</string>
+    <string name="pause_button_text">Pause</string>
+    <string name="skip_track_button_text">Skip</string>
+    <string name="back_track_button_text">Back</string>
+    <string name="shuffle_button_text">Create Shuffle</string>
+	
+    <string name="numSongsDialogTitle">Choose number of songs</string>
+    <string name="numSongsDialogOK">OK</string>
+    <string name="numSongsDialogCancel">Cancel</string>
+    <color name="app_background_color">#1D1433</color>
+    <color name="playlist_selector_selected">#A27189</color>
+    <color name="playlist_selector_normal">#8E6E9B</color>
+    
+    <color name="song_chooser_background_color">#281231</color>
+    <color name="song_chooser_item_side_color">#73629C</color>
+    <color name="song_selector_normal">#7E719C</color>
+    <color name="song_selector_pressed">#A7A976</color>	
+    <color name="song_selector_selected">#A27189</color>
+    
+    <color name="player_button_color">#A7A976</color>
+    <color name="player_button_disabled">#4B4B27</color>
+    <color name="player_button_selected">#46A963</color>
+    <color name="player_button_pressed">#7E719C</color>
+</resources>

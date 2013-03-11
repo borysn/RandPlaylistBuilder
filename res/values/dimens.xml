@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="songlist_layout_height">300dp</dimen>
+    <dimen name="songname_text_size">15sp</dimen>
+    <dimen name="artistname_text_size">12sp</dimen>
+    <dimen name="playlist_name_text_size">15sp</dimen>
+    <dimen name="playlist_chooser_height">27sp</dimen>
+	<dimen name="player_button_text_size">12sp</dimen>
+	<dimen name="player_button_height">40sp</dimen>
+	<dimen name="player_button_width">60sp</dimen>
+	
+</resources>

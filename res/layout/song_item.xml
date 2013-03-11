@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:layout_marginLeft="5dp"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/song_list_selector" >
+	<View
+		android:id="@+id/side"
+		android:layout_width="10dp"
+		android:layout_height="42dp"
+        android:layout_alignParentTop="true"      
+        android:layout_alignParentLeft="true"
+        android:clickable="false"
+		android:background="@color/song_chooser_item_side_color" /> 
+    <CheckBox
+        android:id="@+id/songPlayStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:checked="true" /> 
+	<TextView 
+        android:id="@+id/songName" 
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:textSize="@dimen/songname_text_size" 
+        android:layout_toRightOf="@id/side"
+    	android:layout_marginLeft="5dp"
+    	android:scrollHorizontally="true"/>
+	<TextView 
+        android:id="@+id/artistName"
+        android:layout_width="fill_parent"
+        android:layout_height="16dp"
+        android:textSize="@dimen/artistname_text_size"
+        android:layout_below="@id/songName"
+        android:layout_alignLeft="@id/artistName"
+   		android:layout_marginLeft="25dp"/>
+</RelativeLayout>

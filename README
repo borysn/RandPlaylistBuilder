@@ -1,0 +1,20 @@
+=====================================
+
+   RandPlaylistBuilder For Android
+			  
+		Borys H.N.
+		3.11.13
+		
+=====================================
+	
+Instructions:
+1) Proceede to choose a playlist, or you can create a shuffle
+2) Uncheck songs you don't want to play
+3) Selected a song, and press play to start the playlist
+
+TODO: add song durations, and add song progress slide bar 
+TODO: add pause for phone call, thats annoying
+TODO: add query manager for a more dynamic approach to android MediaStore
+TODO: implement SongQueue 
+TODO: functionality to re-order playlists, drag and drop to position
+TODO: modify, write, delete playlists
