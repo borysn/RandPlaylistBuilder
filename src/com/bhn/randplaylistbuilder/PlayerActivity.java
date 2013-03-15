@@ -21,11 +21,16 @@ package com.bhn.randplaylistbuilder;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Context;
+import android.telephony.PhoneStateListener;
+import android.telephony.TelephonyManager;
 
 public class PlayerActivity extends Activity {
 	private PlaylistChooser playlistChooser;
 	private SongChooser songChooser;
 	private SongPlayer songPlayer;
+	private TelephonyManager teleMan;
+	private PhoneCallListener phoneCallListener;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -45,5 +50,10 @@ public class PlayerActivity extends Activity {
 		songPlayer = new SongPlayer(this, songChooser);
 		songChooser.setSongPlayer(songPlayer);
 		playlistChooser.setSongPlayer(songPlayer);
+		
+		//now setup what to do when a phone call is received
+		phoneCallListener = new PhoneCallListener(this, songPlayer);
+		teleMan = (TelephonyManager)this.getSystemService(Context.TELEPHONY_SERVICE);
+		teleMan.listen(phoneCallListener, PhoneStateListener.LISTEN_CALL_STATE);		
 	}
 }

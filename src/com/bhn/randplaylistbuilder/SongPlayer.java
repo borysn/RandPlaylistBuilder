@@ -54,6 +54,22 @@ public class SongPlayer extends Activity {
 		setSelectedButtonState(0); 
 	}
 	
+	/*
+	 * These next two methods will be used 
+	 * by PhoneCallListener to appropriately handle 
+	 * song playing.
+	 * 
+	 * For now we will just pause the song and resume playing 
+	 * after phone call is over
+	 */
+	public void pauseSong() {
+		pauseButton.performClick(); //basically same code
+	}
+	
+	public void playSong() {
+		playButton.performClick(); //basically same code
+	}
+	
 	public void reset() {
 		playingPosition = -1;
 	}

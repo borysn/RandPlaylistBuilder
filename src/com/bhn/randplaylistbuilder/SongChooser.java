@@ -72,20 +72,29 @@ public class SongChooser extends Activity {
 	private void setOnItemClickListener() {
 		songList.setOnItemClickListener((new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            	int playingPosition = songPlayer.getPlayingPosition();
             	//this is used to help setup different button states
             	//	1 state for a selected song that is playing
             	//  1 state for a selected song that is not playing
-            	if ((selectedPosition != position) || ((selectedPosition != songPlayer.getPlayingPosition()) || selectedPosition == -1)) {
+            	//what defines 1st state?
+            	//selectedPosition == -1 -- so no songs have been selected let it through
+            	//position != playingPosition -- this is next state
+            	//selectedPosition != position -- song reselcted, do nothing
+            	//(selectedPosition != position) || ((selectedPosition != songPlayer.getPlayingPosition()) || selectedPosition == -1)
+            	if ((selectedPosition != position || selectedPosition == -1) && playingPosition != position)  {
             		//button state 
             		songPlayer.setSelectedButtonState(1); 
 	                Util.popToast("item=" + position + " | songname=" + songFetcher.getSongs().get(position).getName());
 	                selectedPosition = position; 
 	                songlistAdapter.setSelectedPosition(position);
-            	} else if (selectedPosition == songPlayer.getPlayingPosition()){
+            	} else if (position == songPlayer.getPlayingPosition()){ //this case is only true if playing song is reselected
             		//this gets called after i re-select the song item twice. 
             		//needs to be called after the initial selection     TODO
             		//not sure whats going on yet
+            		selectedPosition = songPlayer.getPlayingPosition();
+            		songlistAdapter.setSelectedPosition(selectedPosition);
             		songPlayer.setPlayingButtonState(0);
+            		//songlistAdapter.notifyDataSetChanged();
             	}
             }
         }));

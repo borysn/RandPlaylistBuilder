@@ -13,8 +13,11 @@ Instructions:
 3) Selected a song, and press play to start the playlist
 
 TODO: add song durations, and add song progress slide bar 
-TODO: add pause for phone call, thats annoying
 TODO: add query manager for a more dynamic approach to android MediaStore
 TODO: implement SongQueue 
 TODO: functionality to re-order playlists, drag and drop to position
 TODO: modify, write, delete playlists
+
+====Update 1=====
+DONE/TODO: add pause for phone call, thats annoying
+DONE/TODO: Error with button state when playing song reselected
