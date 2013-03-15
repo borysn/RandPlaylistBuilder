@@ -21,3 +21,7 @@ TODO: modify, write, delete playlists
 ====Update 1=====
 DONE/TODO: add pause for phone call, thats annoying
 DONE/TODO: Error with button state when playing song reselected
+
+====Update1.1====
+DONE: Found an unhandled excdeption while having a song selecected and switching to 
+a new playlist.

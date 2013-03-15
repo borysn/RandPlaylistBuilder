@@ -23,7 +23,7 @@ public class SongChooser extends Activity {
 	private SongPlayer songPlayer;
 	//private View selectedSong;
 	private int selectedPosition;
-	//private int playingPosition;
+	private int playingPosition;
 	
 	public SongChooser(Activity context) {
 		this.context = context;
@@ -37,12 +37,22 @@ public class SongChooser extends Activity {
 		songList = (ListView)context.findViewById(R.id.song_chooser);
 		//selectedSong = null;
 		selectedPosition = -1;
-		//playingPosition = -1;
+		playingPosition = -1;
 	}
 	
 	public void reset() {
 		//clean up for reloading songs
+		
+		//found error when a song was selected but the playlist was switched
+		//	the play button would stay clickable 
+		//  and it would try to play a song not in the list
+		//  added some variables to reset, and a selected button state call
+		
 		songFetcher.reset();
+		selectedPosition = -1;
+		playingPosition = -1;
+		
+		songPlayer.setSelectedButtonState(0); //disable all
 		if (songlistAdapter != null) {
 			songlistAdapter.reset();
 		}
@@ -72,7 +82,7 @@ public class SongChooser extends Activity {
 	private void setOnItemClickListener() {
 		songList.setOnItemClickListener((new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            	int playingPosition = songPlayer.getPlayingPosition();
+            	playingPosition = songPlayer.getPlayingPosition();
             	//this is used to help setup different button states
             	//	1 state for a selected song that is playing
             	//  1 state for a selected song that is not playing
