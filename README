@@ -15,7 +15,7 @@ Instructions:
 TODO: add song durations, and add song progress slide bar 
 TODO: add query manager for a more dynamic approach to android MediaStore
 TODO: implement SongQueue 
-TODO: functionality to re-order playlists, drag and drop to position
+TODO: functionality to re-order songs in list, drag and drop to position
 TODO: modify, write, delete playlists
 
 ====Update 1=====
