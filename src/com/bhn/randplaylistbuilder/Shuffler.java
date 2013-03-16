@@ -113,7 +113,7 @@ public class Shuffler extends Activity {
 	private Cursor getCursor() {
 		Cursor cursor = getCompleteSongList();
 		
-		Util.popToast("Shuffler num songs = " + cursor.getCount());
+		Util.popToast("Shuffler total num songs = " + cursor.getCount());
 		
 		return cursor;
 	}

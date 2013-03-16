@@ -7,20 +7,14 @@ package com.bhn.randplaylistbuilder;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.util.Log;
-import android.content.Context;	
-import android.content.ContextWrapper;
 
 public class PhoneCallListener extends PhoneStateListener {
-    private Context context;
-    private ContextWrapper wrapper;
     private SongPlayer songPlayer;
     private boolean isPaused;
     
     //need to pass in some values for the full functionality
-    public PhoneCallListener(Context context, SongPlayer songPlayer) {
-    	this.context = context;
+    public PhoneCallListener(SongPlayer songPlayer) {
     	this.songPlayer = songPlayer;
-    	wrapper = new ContextWrapper(context);
     	isPaused = false;
     }
     

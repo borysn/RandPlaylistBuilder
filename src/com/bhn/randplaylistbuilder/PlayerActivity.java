@@ -52,7 +52,7 @@ public class PlayerActivity extends Activity {
 		playlistChooser.setSongPlayer(songPlayer);
 		
 		//now setup what to do when a phone call is received
-		phoneCallListener = new PhoneCallListener(this, songPlayer);
+		phoneCallListener = new PhoneCallListener(songPlayer);
 		teleMan = (TelephonyManager)this.getSystemService(Context.TELEPHONY_SERVICE);
 		teleMan.listen(phoneCallListener, PhoneStateListener.LISTEN_CALL_STATE);		
 	}
